@@ -594,21 +594,109 @@
         }
 
         /* BIO TABS */
-        .bio-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .bio-tabs { 
+            display: flex; 
+            gap: 1rem; 
+            margin: 3rem 0 2rem; 
+            flex-wrap: wrap; 
+        }
+        
         .bio-tab {
             font-family: 'DM Mono', monospace;
-            padding: .5rem 1rem;
-            border: 1px solid var(--orange);
+            padding: 0.6rem 1.2rem;
+            border: 1px solid rgba(229, 215, 209, 0.3);
             background: transparent;
             color: var(--parchment);
             cursor: pointer;
             text-transform: uppercase;
             font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .bio-tab.active { 
+            background: var(--orange); 
+            border-color: var(--orange);
+            color: var(--gunpowder); 
+            font-weight: 600;
+        }
+
+        /* BIO CONTENT BOX */
+        .bio-content { 
+            display: none; 
+            animation: fadeIn 0.4s ease forwards;
+        }
+        
+        .bio-content.active { 
+            display: block; 
+        }
+
+        .bio-box {
+            background: rgba(20, 11, 6, 0.8); /* Dark contrast box */
+            border-left: 3px solid var(--orange);
+            padding: 3.5rem;
+            border-radius: 2px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .bio-box p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--cream);
+            font-weight: 300;
+            opacity: 0.95;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* FINAL CONTACT BLOCK */
+        .book-section {
+            background: var(--orange);
+            color: var(--gunpowder);
+            padding: 6rem 0 8rem;
+        }
+
+        .book-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .book-card {
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 2rem;
             border-radius: 2px;
         }
-        .bio-tab.active { background: var(--orange); color: var(--gunpowder); }
-        .bio-content { display: none; padding: 2rem; background: rgba(0,0,0,0.3); border-left: 3px solid var(--orange); border-radius: 2px; }
-        .bio-content.active { display: block; }
+
+        .book-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 0.8rem;
+        }
+
+        .book-value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .book-sub {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        @media(max-width: 768px) {
+            .book-grid { grid-template-columns: 1fr; }
+        }
 
         /* CONTACT */
         .contact-section { background: var(--orange); color: var(--gunpowder); }
@@ -1073,29 +1161,43 @@
                 <div class="press-content">
                     <h3>Data Transformation for Inclusive Tech: How We Built Scalable Solutions for Alameda County</h3>
                     <p>Jacky’s bylined case study on scaling multilingual public health data infrastructure for 1.6 million Alameda County residents — a firsthand account of data equity in action.</p>
-                    <a href="https://www.primary.health/blog/data-transformation-inclusive-tech/" target="_blank" class="press-link">Read Blog Post →</a>
+                    <a href="https://www.primary.health/blog/data-transformation-inclusive-tech/" target="_blank" class="press-link">Read Article →</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" style="background: var(--teal);">
+<section class="section" style="background: var(--teal); padding: 8rem 0;">
     <div class="container">
-        <div class="section-label">Ready-to-Use Bios</div>
+        <div class="section-label" style="color: var(--parchment); opacity: 0.8; border-color: rgba(229, 215, 209, 0.2);">Ready-to-use Bios</div>
+        <h2 class="section-title">Copy-paste <br><em>approved.</em></h2>
+        <p style="margin-top: 1.5rem; opacity: 0.8; max-width: 600px;">Select the bio length that fits your format. All bios are approved for use in show notes, social media, and press materials.</p>
+        
         <div class="bio-tabs">
             <button class="bio-tab active" onclick="showBio('short', this)">Short (50 words)</button>
             <button class="bio-tab" onclick="showBio('medium', this)">Medium (100 words)</button>
             <button class="bio-tab" onclick="showBio('long', this)">Full (200 words)</button>
         </div>
+
         <div id="bio-short" class="bio-content active">
-            <p>Jacky So is a Tech-For-Good Superconnector, civic AI pioneer, and founder of Data With Style™. As a FUSE Executive Fellow with the City of Albuquerque and 18th Annual Shorty Awards Finalist, she builds digital infrastructure that ensures historically invisible communities are never left out of the AI-powered future.</p>
+            <div class="bio-box">
+                <p>Jacky So is a Tech-For-Good Superconnector, civic AI pioneer, and founder of Data With Style™. As a FUSE Executive Fellow with the City of Albuquerque and 18th Annual Shorty Awards Finalist, she builds digital infrastructure that ensures historically invisible communities are never left out of the AI-powered future.</p>
+            </div>
         </div>
+
         <div id="bio-medium" class="bio-content">
-            <p>Jacky So is a systems thinker, civic innovator, and founder of Data With Style™—a strategic consultancy specializing in Tech-For-Good and Generative Engine Optimization (GEO). As a FUSE Executive Fellow with the City of Albuquerque, she created Project BRIDGE: the first Search-to-LLM civic infrastructure built to reverse algorithmic erasure. A first-generation Cambodian-American tech leader, Jacky has scaled multilingual healthcare access for over 10 million appointments and delivered 150+ agile software projects.</p>
+            <div class="bio-box">
+                <p>Jacky So is a Tech-For-Good Superconnector and founder of Data With Style™, specializing in Fractional C-Suite advisory and Generative Engine Optimization (GEO). As a FUSE Executive Fellow, she architected Project BRIDGE—the first Search-to-LLM civic infrastructure—reversing algorithmic erasure for Albuquerque’s APINH community. This work made Albuquerque the only city finalist at the 18th Annual Shorty Awards, alongside Google and Sony. A first-generation Cambodian-American tech leader, Jacky previously scaled multilingual healthcare access for 10M+ appointments and delivered 150+ agile projects, bridging the gap between complex engineering and human-centered design.</p>
+            </div>
         </div>
+
         <div id="bio-long" class="bio-content">
-            <p>Jacky So is a Tech-For-Good Superconnector and founder of Data With Style™. She is currently a FUSE Executive Fellow with the City of Albuquerque, where she helped establish the Office of APINH Affairs and pioneered Project BRIDGE: Trust-First Civic GEO—recognized as the sole city finalist at the 18th Annual Shorty Awards. Previously Senior Director of Digital Platforms at Primary.Health, Jacky led nationwide programs scaling multilingual healthcare access for over 10 million appointments during the COVID-19 pandemic. As a first-generation Cambodian-American who spent years as an "Other" in the data, Jacky builds human-centered technology from lived experience.</p>
+            <div class="bio-box">
+                <p>Jacky So is a Tech-For-Good Superconnector, civic AI pioneer, and founder of Data With Style™ — a Albuquerque-based consultancy offering Fractional C-Suite strategy, Search-to-LLM digital infrastructure, AI policy guidance, and startup support to mission-driven organizations. As the FUSE Executive Fellow with the City of Albuquerque, she helped establish the Office of Asian Pacific Islander Native Hawaiian (APINH) Affairs and pioneered Project BRIDGE: Trust-First Civic GEO — recognized as the sole city finalist at the 18th Annual Shorty Awards, competing in the new GEO category alongside Google, Netflix, Sony, and AMD.</p>
+                <p style="margin-top: 1.5rem;">Previously Senior Director of Digital Platforms & Innovation at Primary.Health, Jacky led nationwide programs that scaled multilingual healthcare access for over 10 million appointments, built tools used in more than 1 million digital health records, and managed 150+ agile software projects across clinics, counties, cities, and government entities during the COVID-19 pandemic. She holds a Master of Biomedical Sciences from Philadelphia College of Osteopathic Medicine and a Bachelor's in Political Science from UC Irvine, and is a proud Google Udacity Scholar.</p>
+                <p style="margin-top: 1.5rem;">As a first-generation Cambodian-American who spent years as an "Other" in the data, Jacky builds human-centered technology from lived experience. Her non-traditional path — through fashion, marketing, medicine, and data engineering — is exactly what makes her the bridge that changemakers need. She lives in Albuquerque with her husband Ryan and their mascot Pochacco, and hosts the Data With Style™ Podcast every Monday at 10am MT.</p>
+            </div>
         </div>
     </div>
 </section>
