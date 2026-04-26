@@ -280,6 +280,123 @@
     padding: .3rem .7rem;
 }
 
+        /* FEATURED WORK SPECIFIC STYLES */
+        .featured-work { background: var(--gunpowder); }
+
+        .project-card {
+            background: #304349; /* Teal from your screenshot */
+            padding: 3.5rem;
+            margin-top: 3rem;
+            position: relative;
+            border-radius: 4px;
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media(max-width: 800px) {
+            .project-card { grid-template-columns: 1fr; padding: 2rem; text-align: center; }
+            .project-card .seal-container { order: -1; margin: 0 auto; }
+        }
+
+        .project-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        /* THE "SEAL" BADGE STYLING */
+        .seal-container {
+            width: 140px;
+            height: 140px;
+            border: 1px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            background: rgba(241, 88, 8, 0.1);
+        }
+
+        .seal-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.55rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--orange);
+            margin-bottom: 0.3rem;
+        }
+
+        .seal-main {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--cream);
+            line-height: 1.2;
+        }
+        /* PODCAST SECTION STYLES */
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        @media(max-width: 768px) {
+            .podcast-grid { grid-template-columns: 1fr; }
+        }
+
+        .podcast-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(229, 215, 209, 0.1);
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            gap: 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .podcast-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(241, 88, 8, 0.3);
+        }
+
+        .podcast-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-style: italic;
+            color: var(--orange);
+            line-height: 1;
+        }
+
+        .podcast-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .podcast-card p {
+            font-size: 0.9rem;
+            color: var(--parchment);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
         /* BIO TABS */
         .bio-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .bio-tab {
@@ -488,6 +605,113 @@
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">The Bridge Between Tech & People</h3>
                 <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Across pandemic startups and city government, Jacky occupies the space between engineers and communities. Her path through medicine, fashion, and data engineering is what makes her solutions work in the real world. [cite: 54, 55, 56]</p>
                 <div class="proof-tag"><span class="tag-box">Superconnector</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section featured-work">
+    <div class="container">
+        <div class="section-label">Featured Work</div>
+        <h2 class="section-title">Project BRIDGE:<br><em>We changed the course of the internet.</em></h2>
+
+        <div class="project-card">
+            <div class="project-info">
+                <h3>18th Annual Shorty Awards — GEO Finalist</h3>
+                <p style="margin-bottom: 1.5rem;">The City of Albuquerque’s Office of APINH Affairs — architected by Jacky So — became the <em>only city government</em> to be named a finalist at the 2026 Shorty Awards, competing in the new category of Generative Engine Optimization (GEO) alongside global giants[cite: 6]. Mayor Tim Keller called it proof that "cities can move boldly, build trust, and make sure no community is left out of the future"[cite: 7].</p>
+                <p>Operating on a $0 budget inside a legacy municipal CMS, Jacky engineered a Semantic Equity Architecture from scratch — bypassing traditional JSON formats to build the first LLM-optimized civic Knowledge Graph for a community that had been digitally invisible since the 1800s[cite: 8]. The APINH community now has a permanent, AI-readable Sovereign Safe Harbor on a high-authority .gov domain[cite: 9].</p>
+            </div>
+            <div class="seal-container">
+                <div class="seal-label">Shorty Awards · 2026</div>
+                <div class="seal-main">GEO Finalist</div>
+            </div>
+        </div>
+
+        <div class="project-card" style="margin-top: 2.5rem;">
+            <div class="project-info">
+                <h3>Alameda County: Inclusive Tech at Public Health Scale</h3>
+                <p>During the pandemic, Jacky led the data transformation effort for Alameda County’s multilingual public health outreach — covering 1.6M+ residents across disparate data sources[cite: 12]. She added missing languages (including Farsi), triggered accessibility accommodation surveys, and built the Epic/EMR/EHR importer that improved patient experiences across the county[cite: 13]. A coalition of fire departments, health centers, and county teams called her work "an exemplification of technology, data, and human-centered design"[cite: 14].</p>
+            </div>
+            <div class="seal-container">
+                <div class="seal-label">Primary.Health · 2021</div>
+                <div class="seal-main">Health Equity at Scale</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-label">For Podcast Hosts</div>
+        <h2 class="section-title">She can talk about<br><em>all of this.</em></h2>
+        
+        <p style="max-width: 650px; margin-top: 1.5rem; color: var(--parchment); opacity: 0.9;">
+            Jacky brings rare fluency across technology, community, identity, and career — ideal for shows focused on tech-for-good, equity, startups, and non-traditional paths. Every topic comes with real stories and concrete proof points.
+        </p>
+
+        <div class="podcast-grid">
+            <div class="podcast-card">
+                <div class="podcast-number">01</div>
+                <div>
+                    <h3>What Is "Algorithmic Erasure" — and How Do We Fix It?</h3>
+                    <p>When AI systems are trained on biased or incomplete data, entire communities become invisible. Jacky explains the problem in plain language and introduces Civic GEO as the solution.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">02</div>
+                <div>
+                    <h3>The Non-Traditional Career Path as a Superpower</h3>
+                    <p>From fashion internships to biomedical sciences to data engineering to civic AI — Jacky's story is a masterclass in treating every "detour" as an advantage in tech-for-good work.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">03</div>
+                <div>
+                    <h3>How Local Governments Can Beat Big Tech on AI Equity</h3>
+                    <p>Jacky did it on a $0 budget in 70 days. She breaks down the playbook for how under-resourced public institutions can build AI-ready infrastructure and protect community data sovereignty.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">04</div>
+                <div>
+                    <h3>The "Gap Quarter" and the Permission to Rest</h3>
+                    <p>A self-described recovering workaholic, Jacky deliberately stepped back from 12–14 hour days — and that pause led to her most impactful work. A candid conversation about burnout, identity, and career reinvention.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">05</div>
+                <div>
+                    <h3>Building Tech When You're the "Other" in the Data</h3>
+                    <p>For years Jacky checked the "Other" box on surveys. Now she builds systems that eliminate those boxes. An honest look at what it means to design for communities that have been ignored by default.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">06</div>
+                <div>
+                    <h3>What the Pandemic Taught Us About Scaling Equitable Tech Fast</h3>
+                    <p>150 software projects, 10 million appointments, a brand-new startup — in the middle of a global crisis. Jacky shares what genuine urgency + equity-first design looks like at scale.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">07</div>
+                <div>
+                    <h3>GEO: The Next Frontier After SEO (and Why It Matters for Communities)</h3>
+                    <p>Jacky deployed GEO for civic equity nearly a year before Google released AI Overviews. An accessible deep dive into how Search-to-LLM infrastructure works and why it's a tool for justice.</p>
+                </div>
+            </div>
+
+            <div class="podcast-card">
+                <div class="podcast-number">08</div>
+                <div>
+                    <h3>The Superconnector Model: Community-First Tech Leadership</h3>
+                    <p>Jacky's defining skill is connecting people, disciplines, and ideas that don't normally talk. She unpacks what it means to be a bridge builder in tech — and how that trait accelerates community impact.</p>
+                </div>
             </div>
         </div>
     </div>
