@@ -518,7 +518,63 @@
             font-weight: 500;
             color: var(--cream);
             line-height: 1.3;
-        }        
+        }
+        
+        /* PRESS SECTION STYLES */
+        .press-list {
+            margin-top: 3.5rem;
+        }
+
+        .press-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(229, 215, 209, 0.1);
+            gap: 2rem;
+        }
+
+        .press-item:last-child {
+            border-bottom: none;
+        }
+
+        .press-meta {
+            font-family: 'DM Mono', monospace;
+            text-transform: uppercase;
+        }
+
+        .press-source {
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            color: var(--orange);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+        }
+
+        .press-date {
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: var(--parchment);
+            opacity: 0.6;
+        }
+
+        .press-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 0.8rem;
+        }
+
+        .press-content p {
+            font-size: 0.95rem;
+            color: var(--parchment);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        @media(max-width: 650px) {
+            .press-item { grid-template-columns: 1fr; gap: 0.8rem; padding: 2rem 0; }
+        }
 
         /* BIO TABS */
         .bio-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
@@ -934,6 +990,69 @@
             <div class="service-card">
                 <div class="service-label">Podcast</div>
                 <div class="service-name">Data With Style™ Podcast — New Episodes Mondays 10am MT</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--gunpowder);">
+    <div class="container">
+        <div class="section-label">In The Press</div>
+        <h2 class="section-title">Media mentions<br><em>& recognition.</em></h2>
+        
+        <div class="press-list">
+            <div class="press-item">
+                <div class="press-meta">
+                    <div class="press-source">City of Albuquerque</div>
+                    <div class="press-date">April 2026</div>
+                </div>
+                <div class="press-content">
+                    <h3>Project BRIDGE Named Shorty Award Finalist</h3>
+                    <p>Albuquerque’s APINH Affairs project — architected by Jacky So — named the only city entity to be a finalist at the 18th Annual Shorty Awards, competing alongside Google, Netflix, Sony, and AMD in the GEO category.</p>
+                </div>
+            </div>
+
+            <div class="press-item">
+                <div class="press-meta">
+                    <div class="press-source">The Shorty Awards<br>18th Annual · 2026</div>
+                </div>
+                <div class="press-content">
+                    <h3>Project BRIDGE: Trust-First Civic GEO — Official Finalist</h3>
+                    <p>Official Shorty Awards finalist entry recognizing Jacky So’s pioneering Search-to-LLM civic infrastructure, built from scratch on a $0 budget to reverse "Algorithmic Erasure" of the APINH community in New Mexico.</p>
+                </div>
+            </div>
+
+            <div class="press-item">
+                <div class="press-meta">
+                    <div class="press-source">City of Albuquerque</div>
+                    <div class="press-date">June 2025</div>
+                </div>
+                <div class="press-content">
+                    <h3>New Faces Bring Diverse Wealth of Experience to City Roles</h3>
+                    <p>Mayor Tim Keller officially welcomed Jacky So as a FUSE Executive Fellow: "Their deep experience and dedication to equity and innovation reflect the best of Albuquerque’s public service."</p>
+                </div>
+            </div>
+
+            <div class="press-item">
+                <div class="press-meta">
+                    <div class="press-source">AnitaB.org / Wogrammer</div>
+                    <div class="press-date">2020 / 2021</div>
+                </div>
+                <div class="press-content">
+                    <h3>How a "Gap Quarter" Positioned Jacky to Make a Difference in the Fight Against COVID-19</h3>
+                    <p>AnitaB.org profiled Jacky’s journey from burnout to pandemic tech hero — a story about recovery, reinvention, and showing up for community impact at the most critical possible moment.</p>
+                </div>
+            </div>
+
+            <div class="press-item">
+                <div class="press-meta">
+                    <div class="press-source">Primary.Health Newsroom</div>
+                    <div class="press-date">February 2025</div>
+                </div>
+                <div class="press-content">
+                    <h3>Data Transformation for Inclusive Tech: How We Built Scalable Solutions for Alameda County</h3>
+                    <p>Jacky’s bylined case study on scaling multilingual public health data infrastructure for 1.6 million Alameda County residents — a firsthand account of data equity in action.</p>
+                </div>
             </div>
         </div>
     </div>
