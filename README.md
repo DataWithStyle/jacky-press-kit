@@ -19,15 +19,15 @@ Welcome to the official repository for the **Jacky So Digital Press Kit**. This 
 
 
 
-[cite_start]Jacky So is a **Tech-For-Good Superconnector** and systemic catalyst[cite: 5, 202]. [cite_start]As a systems thinker, civic innovator, and zero-to-launch specialist, she founded **Data With Style™**—a strategic consultancy specializing in Tech-For-Good, Fractional C-Suite advisory, and Generative Engine Optimization (GEO)[cite: 9, 127]. 
+Jacky So is a **Tech-For-Good Superconnector** and systemic catalyst. As a systems thinker, civic innovator, and zero-to-launch specialist, she founded **Data With Style™**—a strategic consultancy specializing in Tech-For-Good, Fractional C-Suite advisory, and Generative Engine Optimization (GEO). 
 
 
 
-[cite_start]As a **FUSE Executive Fellow** with the City of Albuquerque, she developed **Project BRIDGE**: the world's first Search-to-LLM civic infrastructure designed to reverse algorithmic erasure[cite: 27, 33, 60, 65]. [cite_start]Her work led Albuquerque to become the only city entity in the world recognized as a finalist at the **18th Annual Shorty Awards**, standing alongside global giants like Google, Netflix, and Sony[cite: 29, 30, 63, 154].
+As a **FUSE Executive Fellow** with the City of Albuquerque, she developed **Project BRIDGE**: the world's first Search-to-LLM civic infrastructure designed to reverse algorithmic erasure. Her work led Albuquerque to become the only city entity in the world recognized as a finalist at the **18th Annual Shorty Awards**, standing alongside global giants like Google, Netflix, and Sony.
 
 
 
-[cite_start]A first-generation Cambodian-American and seasoned tech executive, Jacky previously scaled multilingual healthcare access for over **10 million digital care appointments** and delivered **150+ agile software projects** while leading high-performing distributed teams across global timezones[cite: 8, 50, 97].
+A first-generation Cambodian-American and seasoned tech executive, Jacky previously scaled multilingual healthcare access for over **10 million digital care appointments** and delivered **150+ agile software projects** while leading high-performing distributed teams across global timezones.
 
 
 
@@ -43,23 +43,23 @@ Jacky So provides strategic leadership for mission-driven organizations and futu
 
 ### 1. Zero-to-Launch Advising
 
-[cite_start]Seasoned expertise in taking complex, human-centered products from concept to market[cite: 17, 142]. Jacky specializes in navigating the high-pressure space between engineering requirements and community impact.
+Seasoned expertise in taking complex, human-centered products from concept to market. Jacky specializes in navigating the high-pressure space between engineering requirements and community impact.
 
 
 
 ### 2. Fractional C-Suite Engagements
 
-[cite_start]Available for **Fractional CTO, CMO, or Chief Innovation Officer** roles[cite: 125, 130, 140]. 
+Available for **Fractional CTO, CMO, or Chief Innovation Officer** roles. 
 
-* [cite_start]**Specialties:** AI Policy & Governance, Analytics & Data Strategy, and architecting trust-first digital infrastructure[cite: 132, 134, 138].
+* **Specialties:** AI Policy & Governance, Analytics & Data Strategy, and architecting trust-first digital infrastructure.
 
 
 
 ### 3. Thought Leadership & Media
 
-* [cite_start]**Podcast Guest:** Expert commentary on "Algorithmic Erasure," the superpower of non-traditional career paths, and how local governments can outpace Big Tech in AI equity[cite: 79, 83, 86].
+* **Podcast Guest:** Expert commentary on "Algorithmic Erasure," the superpower of non-traditional career paths, and how local governments can outpace Big Tech in AI equity.
 
-* [cite_start]**Op-Eds & Speaking:** Available to write or speak on **Restorative Digital Justice** and institutionalizing equity through data[cite: 51, 119].
+* **Op-Eds & Speaking:** Available to write or speak on **Restorative Digital Justice** and institutionalizing equity through data.
 
 
 
@@ -71,11 +71,11 @@ Jacky So provides strategic leadership for mission-driven organizations and futu
 
 * **Agency:** [Data With Style™](https://datawithstyle.com)
 
-* [cite_start]**Podcast:** **Data With Style Podcast** (New episodes Mondays 10am MT) [cite: 146, 205]
+* **Podcast:** **Data With Style Podcast** (New episodes Mondays 10am MT) 
 
-* [cite_start]**Email:** [contact@datawithstyle.com](mailto:contact@datawithstyle.com) [cite: 197, 208]
+* **Email:** [contact@datawithstyle.com](mailto:contact@datawithstyle.com) 
 
-* [cite_start]**Location:** Albuquerque, New Mexico (Albu-quirky 🛸) [cite: 15, 128]
+* **Location:** Albuquerque, New Mexico (Albu-quirky 🛸) 
 
 
 
