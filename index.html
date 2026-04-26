@@ -200,16 +200,18 @@
             font-family: 'DM Mono', monospace;
             font-size: .65rem;
             letter-spacing: .35em;
-            color: var(--orange);
+            color: var(--orange); /* Default color for dark sections */
             text-transform: uppercase;
             margin-bottom: 1.5rem;
-            display: flex; align-items: center; gap: .8rem;
+            display: flex; 
+            align-items: center; 
+            gap: 1.2rem;
         }
         .section-label::after {
             content: '';
             flex: 1;
             height: 1px;
-            background: rgba(241,88,8,.3);
+            background: rgba(241, 88, 8, 0.3); /* Match the orange theme */
         }
 
         .section-title {
@@ -653,25 +655,49 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* FINAL CONTACT BLOCK */
+        /* FINAL BOOKING SECTION STYLES */
         .book-section {
             background: var(--orange);
             color: var(--gunpowder);
-            padding: 6rem 0 8rem;
+            padding: 8rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* RETRO STAR GRAPHIC */
+        .book-section::after {
+            content: '';
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 400px;
+            /* Matches emoji proportions ✦ */
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M50 5 C50 30 70 50 95 50 C70 50 50 70 50 95 C50 70 30 50 5 50 C30 50 50 30 50 5 Z' fill='rgba(0,0,0,0.05)'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 0;
         }
 
         .book-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.5rem;
-            margin-top: 3rem;
+            margin-top: 4rem;
         }
 
         .book-card {
-            background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            padding: 2rem;
+            background: rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
             border-radius: 2px;
+            transition: background 0.3s ease;
+        }
+
+        .book-card:hover {
+            background: rgba(0, 0, 0, 0.08);
         }
 
         .book-label {
@@ -679,19 +705,70 @@
             font-size: 0.6rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            opacity: 0.6;
-            margin-bottom: 0.8rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .book-value {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.4rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--gunpowder);
         }
 
         .book-sub {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+        /* FOOTER CTA LINKS MATCH BRAND */
+        .book-card a {
+            text-decoration: none;
+            color: inherit;
+            transition: opacity 0.2s ease;
+        }
+
+        .book-card a:hover {
             opacity: 0.7;
+            text-decoration: underline;
+            text-decoration-color: rgba(0,0,0,0.2);
+        }
+
+        /* CTAs */
+        .community-cta {
+            display: inline-block;
+            margin-top: 10px;
+            font-weight: 700;
+            color: var(--gunpowder);
+            border-bottom: none;
+            font-size: 0.85rem;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: var(--gunpowder);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--orange);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-legal {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            color: var(--parchment);
+            opacity: 0.5;
+            text-transform: uppercase;
+            line-height: 2;
         }
 
         @media(max-width: 768px) {
@@ -699,18 +776,20 @@
         }
 
         /* CONTACT */
-        .contact-section { background: var(--orange); color: var(--gunpowder); }
+        /* .contact-section { background: var(--orange); color: var(--gunpowder); }
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
-        .contact-detail { background: rgba(0,0,0,0.08); padding: 1.5rem; border-radius: 2px; }
+        .contact-detail { background: rgba(0,0,0,0.08); padding: 1.5rem; border-radius: 2px; } */
 
+        /* FOR HERO SECTION WHEN IT FIRST LOADS */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(22px); }
             to   { opacity: 1; transform: translateY(0); }
         }
+        /* TICKER SMOOTH SCROLL */
         @keyframes ticker {
             from { transform: translateX(0); }
             to   { transform: translateX(-50%); }
-        }
+        } */
     </style>
 </head>
 <body>
@@ -732,7 +811,9 @@
 
     <div class="hero-content container">
         <div class="hero-eyebrow">Tech-For-Good Superconnector</div>
-        <h1 class="hero-name">Jacky<em>So.</em></h1>
+        <h1 class="hero-name">
+        Jacky<a href="https://www.linkedin.com/in/jacky-so/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit;"><em>So.</em></a>
+        </h1>
         <p class="hero-title">
             Founder of <strong>Data With Style™</strong> · FUSE Executive Fellow ·
             Shorty Awards Finalist · Civic GEO Pioneer · Systems Thinker · First-Generation
@@ -1202,26 +1283,82 @@
     </div>
 </section>
 
-<section class="contact-section section">
-    <div class="container">
-        <h2 class="section-title">Let's make something<br>worth talking about.</h2>
-        <div class="contact-grid">
-            <div class="contact-detail">
-                <div style="font-size: 0.6rem; letter-spacing: 0.2em; opacity: 0.7;">WEBSITE</div>
-                <strong>datawithstyle.com</strong>
+<section class="book-section">
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="section-label" style="color: var(--gunpowder); border-color: rgba(0,0,0,0.15);">
+            Book Jacky
+            <style>
+                .book-section .section-label::after { background: rgba(0, 0, 0, 0.15); }
+            </style>
+        </div>
+        
+        <h2 class="section-title" style="color: var(--gunpowder);">Let's make something<br>worth talking about.</h2>
+        
+        <div class="book-grid">
+            <div class="book-card">
+                <span class="book-label">Company Website</span>
+                <a href="https://datawithstyle.com" target="_blank" rel="noopener">
+                    <div class="book-value">datawithstyle.com</div>
+                </a>
+                <p class="book-sub">Full service listings, coaching, templates, and podcast</p>
             </div>
-            <div class="contact-detail">
-                <div style="font-size: 0.6rem; letter-spacing: 0.2em; opacity: 0.7;">EMAIL</div>
-                <strong>contact@datawithstyle.com</strong>
+            
+            <div class="book-card">
+                <span class="book-label">Email</span>
+                <a href="mailto:contact@datawithstyle.com">
+                    <div class="book-value">contact@datawithstyle.com</div>
+                </a>
+                <p class="book-sub">For media inquiries, podcast bookings, and speaking</p>
+            </div>
+            
+            <div class="book-card">
+                <span class="book-label">Phone</span>
+                <div class="book-value">+1 505-633-4675</div>
+                <p class="book-sub">Albuquerque, NM — Mountain Time</p>
+            </div>
+            
+            <div class="book-card">
+                <span class="book-label">Podcast</span>
+                <a href="https://www.youtube.com/@datawithstyle" target="_blank" rel="noopener">
+                    <div class="book-value">Data With Style™ Podcast</div>
+                </a>
+                <p class="book-sub">New episodes every Monday at 10am MT dropping soon — <a href="https://www.youtube.com/@datawithstyle" target="_blank" rel="noopener">subscribe</a> via YouTube</p>
+            </div>
+
+            <div class="book-card">
+                <span class="book-label">Expertise Areas</span>
+                <div class="book-value" style="font-size: 1rem; line-height: 1.4; margin-bottom: 1rem;">
+                    Tech-For-Good · Civic AI · Health Tech · GEO · Startup Culture · Equity in Tech · Non-Traditional Career Paths
+                </div>
+                <a href="https://datawithstyle.myflodesk.com/linkinbio" target="_blank" rel="noopener" class="community-cta">
+                    Join Community of Tech-For-Good Changemakers →
+                </a>
+            </div>
+
+            <div class="book-card">
+                <span class="book-label">Show Fit</span>
+                <div class="book-value" style="font-size: 1rem; line-height: 1.4;">
+                    Startup Founders · Community Impact · AI Ethics · Women in Tech · Non-Traditional Career · Health Equity · Civic Innovation
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="footer">
+<footer class="site-footer">
     <div class="container">
-        <div style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--orange); margin-bottom: 0.5rem;">Data With Style™</div>
-        <p style="font-family: 'DM Mono', monospace; font-size: 0.6rem; opacity: 0.5; text-transform: uppercase;">© 2026 Data With Style, LLC · Albuquerque, NM</p>
+        <a href="https://datawithstyle.com" target="_blank" rel="noopener" style="text-decoration: none;">
+        <img src="https://datawithstyle.com/wp-content/uploads/2026/04/logo-datawithstyle-url-orange-vertical-scaled.png" 
+             alt="Data With Style™ Logo" 
+             style="height: 120px; width: auto; margin-bottom: 2rem; opacity: 0.9; transition: opacity 0.3s;"
+             onmouseover="this.style.opacity='1'" 
+             onmouseout="this.style.opacity='0.9'">
+        </a>
+        <div class="footer-brand">Data With Style™</div>
+        <div class="footer-legal">
+            © 2026 Data With Style, LLC · 6001 Menaul Blvd NE Unit 1202, Albuquerque, NM 87110<br>
+            Engineering Restorative Digital Justice through Search-to-LLM Infrastructure
+        </div>
     </div>
 </footer>
 
