@@ -425,6 +425,52 @@
             opacity: 0.8;
             line-height: 1.6;
         }
+        /* INTERVIEW QUESTIONS STYLES */
+        .interview-section {
+            background: var(--teal); /* #304349 from your variables */
+            padding: 6rem 0;
+        }
+
+        .question-list {
+            margin-top: 3.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .question-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            padding: 2.5rem 0;
+            border-bottom: 1px solid rgba(229, 215, 209, 0.15);
+            gap: 1rem;
+        }
+
+        .question-item:last-child {
+            border-bottom: none;
+        }
+
+        .q-num {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--orange);
+            font-weight: 500;
+            padding-top: 0.4rem;
+        }
+
+        .q-text {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: var(--cream);
+            line-height: 1.55;
+            max-width: 780px;
+        }
+
+        @media(max-width: 600px) {
+            .question-item { grid-template-columns: 1fr; gap: 0.5rem; padding: 1.5rem 0; }
+        }
+
         /* BIO TABS */
         .bio-tabs { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
         .bio-tab {
@@ -740,6 +786,55 @@
                     <h3>The Superconnector Model: Community-First Tech Leadership</h3>
                     <p>Jacky's defining skill is connecting people, disciplines, and ideas that don't normally talk. She unpacks what it means to be a bridge builder in tech — and how that trait accelerates community impact.</p>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section interview-section">
+    <div class="container">
+        <div class="section-label" style="color: var(--parchment); opacity: 0.8;">Ready-to-use</div>
+        <h2 class="section-title">Sample interview<br><em>questions for hosts.</em></h2>
+        
+        <div class="question-list">
+            <div class="question-item">
+                <div class="q-num">Q.01</div>
+                <div class="q-text">You studied political science, interned with a fashion designer, got a biomedical sciences degree, and ended up pioneering AI equity for local governments — how do you actually describe your career path to people?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.02</div>
+                <div class="q-text">Project BRIDGE became the only city government finalized for a Shorty Award in GEO — on a zero-dollar budget. Walk us through what "Civic GEO" actually is and why you think local governments are uniquely positioned to lead here.</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.03</div>
+                <div class="q-text">You’ve said that being a first-generation Cambodian-American who checked the "Other" box for years directly shaped how you build technology. Can you tell us what that means in practice — what does it look like when you're building a product?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.04</div>
+                <div class="q-text">You deliberately took a "gap quarter" from a high-pressure startup role. As a recovering workaholic — what do you say to founders and tech workers who feel like resting is failure?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.05</div>
+                <div class="q-text">During the pandemic you managed 150+ software projects across clinics, counties, cities, schools, and government entities. What’s the one principle about human-centered tech that experience drilled into you?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.06</div>
+                <div class="q-text">You coined the phrase "Institutionalizing Equity Through Data" — what does it actually mean to move equity from a mission statement to a system requirement?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.07</div>
+                <div class="q-text">What would you say to a non-technical founder or nonprofit leader who wants to use AI but is overwhelmed and worried about getting it wrong for their community?</div>
+            </div>
+
+            <div class="question-item">
+                <div class="q-num">Q.08</div>
+                <div class="q-text">Data With Style™ describes itself as "Engineering Restorative Digital Justice through Search-to-LLM Infrastructure." Can you break that down for someone who just wants to know: what do you actually do for clients?</div>
             </div>
         </div>
     </div>
