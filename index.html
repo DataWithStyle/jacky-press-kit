@@ -241,44 +241,72 @@
         }
 
         .proof-section { background: var(--gunpowder); }
-.proof-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-@media(max-width:850px){ .proof-grid { grid-template-columns: 1fr 1fr; } }
-@media(max-width:600px){ .proof-grid { grid-template-columns: 1fr; } }
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        @media(max-width:850px){ .proof-grid { grid-template-columns: 1fr 1fr; } }
+        @media(max-width:600px){ .proof-grid { grid-template-columns: 1fr; } }
 
-.proof-card {
-    background: rgba(48,67,73,0.25);
-    border: 1px solid rgba(241,88,8,0.15);
-    border-top: 3px solid var(--orange);
-    padding: 2rem 1.8rem;
-    display: flex;
-    flex-direction: column;
-    transition: border-color .3s, transform .3s;
-}
-.proof-card:hover {
-    border-color: var(--orange);
-    transform: translateY(-4px);
-}
-.proof-tag {
-    align-self: flex-start;
-    margin-top: auto;
-    padding-top: 1.5rem;
-}
-.tag-box {
-    display: inline-block;
-    font-family: 'DM Mono', monospace;
-    font-size: .6rem;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--orange);
-    background: rgba(241,88,8,0.12);
-    border: 1px solid rgba(241,88,8,0.3);
-    padding: .3rem .7rem;
-}
+        .proof-card {
+            background: rgba(48,67,73,0.25);
+            border: 1px solid rgba(241,88,8,0.15);
+            border-top: 3px solid var(--orange);
+            padding: 2rem 1.8rem;
+            display: flex;
+            flex-direction: column;
+            transition: border-color .3s, transform .3s;
+        }
+        .proof-card:hover {
+            border-color: var(--orange);
+            transform: translateY(-4px);
+        }
+        .proof-tag {
+            align-self: flex-start;
+            margin-top: auto;
+            padding-top: 1.5rem;
+        }
+        .tag-box {
+            display: inline-block;
+            font-family: 'DM Mono', monospace;
+            font-size: .6rem;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--orange);
+            background: rgba(241,88,8,0.12);
+            border: 1px solid rgba(241,88,8,0.3);
+            padding: .3rem .7rem;
+        }
+
+        /* FEATURED WORK SPECIFIC STYLES */
+        .featured-work { background: var(--gunpowder); }
+
+        .project-card {
+            background: #304349; /* Teal from your screenshot */
+            padding: 3.5rem;
+            margin-top: 3rem;
+            position: relative;
+            border-radius: 4px;
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @media(max-width: 800px) {
+            .project-card { grid-template-columns: 1fr; padding: 2rem; text-align: center; }
+            .project-card .seal-container { order: -1; margin: 0 auto; }
+        }
+
+        .project-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
 
         /* FEATURED WORK SPECIFIC STYLES */
         .featured-work { background: var(--gunpowder); }
@@ -504,14 +532,14 @@
         <div class="about-grid">
             <div class="about-text">
                 <p>
-                    Jacky So's career is a masterclass in non-linear impact. She started in political science at UC Irvine, interned with a fashion designer, earned a Master's in Biomedical Sciences, and taught herself data engineering through Codecademy courses late at night—because <strong>she refused to let the gatekeepers of tech decide who belonged.</strong>
-                </p>
+                    Jacky So's career is a masterclass in non-linear impact. She started in political science at UC Irvine, interned with a fashion designer, earned a Master's in Biomedical Sciences, and taught herself data engineering through making the most of free SaaS products to build real solutions late at night—because <strong>she refused to let the gatekeepers of tech decide who belonged.</strong>
+                </p><br>
                 <p>
                     As a first-generation Cambodian-American, she spent years checking the "Other" box on forms that didn't see her. That frustration became fuel. Today she builds infrastructure that ensures communities are never invisible in the data—whether that's in public health, AI systems, or civic government.
-                </p>
+                </p><br>
                 <p>
-                    At the peak of the COVID-19 pandemic, Jacky joined Primary.Health as an inaugural core team member, becoming the bridge between engineers and clients—managing 150+ agile projects, scaling multilingual access for over 10 million appointments, and building tools that touched more than 1 million digital health records.
-                </p>
+                    At the peak of the COVID-19 pandemic, Jacky helped build Primary.Health as an inaugural core team member, becoming the bridge between engineers and clients—managing 150+ agile projects, scaling multilingual access for over 10 million appointments, creating all of the original data models and dynamic dashboards, and building time-sensitive tools from scratch that touched more than 1 million digital health records.
+                </p><br>
                 <p>
                     Today, through her company <strong>Data With Style™</strong> and her FUSE Executive Fellowship with the City of Albuquerque, she is pioneering <em>Civic GEO</em>—an entirely new discipline that ensures historically invisible communities are accurately represented in AI systems and Large Language Models before algorithmic erasure becomes permanent.
                 </p>
@@ -552,10 +580,10 @@
         <p style="font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3.5vw, 2.2rem); font-style: italic; font-weight: 400; line-height: 1.45; color: var(--cream); max-width: 750px;">
             "Major progress is possible without a fancy budget by aligning the right partners. 
             By focusing on a tech-for-good mindset, we're creating digital justice for 
-            historically underserved groups." [cite: 23]
+            historically underserved groups."
         </p>
         <div style="margin-top: 1.5rem; font-family: 'DM Mono', monospace; font-size: .7rem; letter-spacing: .2em; color: var(--orange); text-transform: uppercase;">
-            — Jacky So, FUSE Executive Fellow & Shorty Awards Finalist, 2026 [cite: 23]
+            — Jacky So, FUSE Executive Fellow & Shorty Awards Finalist, 2026
         </div>
     </div>
 </div>
@@ -568,42 +596,42 @@
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">🏛️</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">FUSE Executive Fellow — City of Albuquerque</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Selected for the highly competitive FUSE Executive Fellowship program, placing experienced professionals in local governments to drive strategic innovation. Jacky supports the City's Justice40 goals and established the new Office of APINH Affairs from the ground up. [cite: 27, 28]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Selected for the highly competitive FUSE Executive Fellowship program, placing experienced professionals in local governments to drive strategic innovation. Jacky supports the City's Justice40 goals and established the new Office of APINH Affairs from the ground up.</p>
                 <div class="proof-tag"><span class="tag-box">Civic Innovation</span></div>
             </div>
 
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">🏆</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">18th Annual Shorty Awards Finalist</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Project BRIDGE was named a finalist at the 2026 Shorty Awards — the only city entity in the competition — alongside Google, Netflix, Sony, and AMD. Recognized for pioneering equity-focused AI technology and the emerging discipline of Generative Engine Optimization (GEO). [cite: 29, 30, 31]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Project BRIDGE was named a finalist at the 2026 Shorty Awards — the only city entity in the competition — alongside Google, Netflix, Sony, and AMD. Recognized for pioneering equity-focused AI technology and the emerging discipline of Generative Engine Optimization (GEO).</p>
                 <div class="proof-tag"><span class="tag-box">Global Recognition</span></div>
             </div>
 
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">🌐</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">Project BRIDGE: Trust-First Civic GEO</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Built the first Search-to-LLM Digital Infrastructure for a civic government with a $0 budget. A 70-day intensive audit produced a Living Knowledge Graph of 230+ businesses and the first disaggregated data set for 62–74 APINH diaspora regions in New Mexico. [cite: 33, 34, 35]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Built the first Search-to-LLM Digital Infrastructure for a civic government with a $0 budget. A 70-day intensive audit produced a Living Knowledge Graph of 230+ businesses and the first disaggregated data set for 62–74 APINH diaspora regions in New Mexico.</p>
                 <div class="proof-tag"><span class="tag-box">Civic GEO · AI Equity</span></div>
             </div>
 
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">💊</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">10M+ Healthcare Appointments Scaled</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">As Sr. Director of Digital Platforms & Innovation at Primary.Health, Jacky led nationwide programs to increase multilingual healthcare access, built tools used in over 1M digital health records, and managed 150+ agile projects. [cite: 49, 50]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">As Sr. Director of Digital Platforms & Innovation at Primary.Health, Jacky led nationwide programs to increase multilingual healthcare access, built tools used in over 1M digital health records, and managed 150+ agile projects.</p>
                 <div class="proof-tag"><span class="tag-box">Health Tech · Equity</span></div>
             </div>
 
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">🧠</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">Coined "Restorative Digital Justice"</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Before GEO was an industry term, Jacky developed and deployed the concept. She created the Data With Style Equity in Tech Glossary — codifying proprietary frameworks like Semantic Equity Architecture and Algorithmic Erasure mitigation. [cite: 51, 52, 53]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Before GEO was an industry term, Jacky developed and deployed the concept. She created the Data With Style Equity in Tech Glossary — codifying proprietary frameworks like Semantic Equity Architecture and Algorithmic Erasure mitigation.</p>
                 <div class="proof-tag"><span class="tag-box">Thought Leadership</span></div>
             </div>
 
             <div class="proof-card">
                 <span style="font-size: 1.8rem; margin-bottom: 1rem;">🔗</span>
                 <h3 style="font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: .7rem;">The Bridge Between Tech & People</h3>
-                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Across pandemic startups and city government, Jacky occupies the space between engineers and communities. Her path through medicine, fashion, and data engineering is what makes her solutions work in the real world. [cite: 54, 55, 56]</p>
+                <p style="font-size: .9rem; color: var(--parchment); opacity: .85; line-height: 1.65;">Across pandemic startups and city government, Jacky occupies the space between engineers and communities. Her path through medicine, fashion, and data engineering is what makes her solutions work in the real world.</p>
                 <div class="proof-tag"><span class="tag-box">Superconnector</span></div>
             </div>
         </div>
